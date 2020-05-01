@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from '../components/Form/Form.jsx';
 
 const FormControls = () => {
+  const [url, setUrl] = useState('');
+  const [method, setMethod] = useState('GET');
+  const [jsonBody, setJsonBody] = useState('');
+  
+
   
   //handleSubmit
   //handleUrlChange
@@ -15,7 +20,7 @@ const FormControls = () => {
         onUrlChange={handleUrlChange}
         method={method}
         onInputChange={handleInputChange}
-        response={response}
+        jsonBody={jsonBody}
         onResponseChange={handleResponseChange} />
     </>
   );
