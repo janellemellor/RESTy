@@ -13,7 +13,7 @@ const FormControls = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //call fetch from hooks file
+    //call fetch from hooks file here
   };
 
   return (
@@ -27,10 +27,6 @@ const FormControls = () => {
         onJsonBodyChange={handleJsonBodyChange} />
     </>
   );
-};
-
-FormControls.propTypes = {
-
 };
 
 export default FormControls;
