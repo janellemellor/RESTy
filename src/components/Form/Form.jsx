@@ -34,7 +34,7 @@ Form.propTypes = {
   onUrlChange: PropTypes.func.isRequired,
   method: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
-  jsonBody: PropTypes.string.isRequired,
+  jsonBody: PropTypes.string,
   onJsonBodyChange: PropTypes.func.isRequired
 };
 

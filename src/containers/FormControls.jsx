@@ -7,9 +7,9 @@ const FormControls = () => {
   const [jsonBody, setJsonBody] = useState('');
   
   
-  //handleUrlChange
-  //handleInputChange
-  //handleResponseChange
+  const handleUrlChange = ({ target }) => setUrl(target.value);
+  const handleInputChange = ({ target }) => setMethod(target.value);
+  const handleJsonBodyChange = ({ target }) => setJsonBody(target.value);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +24,7 @@ const FormControls = () => {
         method={method}
         onInputChange={handleInputChange}
         jsonBody={jsonBody}
-        onResponseChange={handleResponseChange} />
+        onJsonBodyChange={handleJsonBodyChange} />
     </>
   );
 };
