@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Form from '../components/Form/Form.jsx';
+import { fetchRequest } from '../services/fetchRequest.js';
 
-const FormControls = () => {
+const RESTyContainer = () => {
   const [url, setUrl] = useState('');
   const [method, setMethod] = useState('GET');
   const [jsonBody, setJsonBody] = useState('');
@@ -13,8 +14,8 @@ const FormControls = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //call fetch from hooks file here
-    //  };
+    fetchRequest(url, method, jsonBody);
+  };
 
   return (
     <>
@@ -29,4 +30,4 @@ const FormControls = () => {
   );
 };
 
-export default FormControls;
+export default RESTyContainer;
