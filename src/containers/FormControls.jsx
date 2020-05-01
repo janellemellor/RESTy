@@ -6,12 +6,15 @@ const FormControls = () => {
   const [method, setMethod] = useState('GET');
   const [jsonBody, setJsonBody] = useState('');
   
-
   
-  //handleSubmit
   //handleUrlChange
   //handleInputChange
   //handleResponseChange
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //call fetch from hooks file
+  };
 
   return (
     <>
