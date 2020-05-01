@@ -6,3 +6,5 @@ export const fetchRequest = (url, method = 'GET', body) => {
     .then(res => res.json());
 };
 
+//body: check method ? body: null
+//can only send a body on POST PATCH PUT

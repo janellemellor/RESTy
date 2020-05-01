@@ -6,19 +6,19 @@ const Form = ({ onSubmit, url, onUrlChange, method, onInputChange, jsonBody, onJ
     <fieldset>
       <input name="url-input" type="text" value={url} onUrlChange={onUrlChange} />
       <label> GET
-        <input type="radio" name="methods" value={method} onInputChange={onInputChange}/>
+        <input type="radio" name="methods" value="GET" onInputChange={onInputChange}/>
       </label>
       <label> POST
-        <input type="radio" name="methods" value={method} onInputChange={onInputChange}/>
+        <input type="radio" name="methods" value="POST" onInputChange={onInputChange}/>
       </label>  
       <label> PUT
-        <input type="radio" name="methods" value={method} onInputChange={onInputChange}/>
+        <input type="radio" name="methods" value="PUT" onInputChange={onInputChange}/>
       </label>  
       <label> PATCH
-        <input type="radio" name="methods" value={method} onInputChange={onInputChange}/>
+        <input type="radio" name="methods" value="PATCH" onInputChange={onInputChange}/>
       </label>  
       <label> DELETE
-        <input type="radio" name="methods" value={method} onInputChange={onInputChange}/>
+        <input type="radio" name="methods" value="DELETE" onInputChange={onInputChange}/>
       </label>    
       <button>Go!</button>
       <label>
@@ -34,7 +34,7 @@ Form.propTypes = {
   onUrlChange: PropTypes.func.isRequired,
   method: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
-  jsonBody: PropTypes.string,
+  jsonBody: PropTypes.string.isRequired,
   onJsonBodyChange: PropTypes.func.isRequired
 };
 

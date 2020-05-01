@@ -14,7 +14,7 @@ const FormControls = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     //call fetch from hooks file here
-  };
+    //  };
 
   return (
     <>
