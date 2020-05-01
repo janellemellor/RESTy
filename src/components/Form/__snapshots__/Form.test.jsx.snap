@@ -61,9 +61,7 @@ exports[`Form Component matches a snapshot 1`] = `
     </button>
     <label>
       <textarea
-        name="response"
-        onResponseChange={[Function]}
-        value="response"
+        name="jsonBody"
       >
          
       </textarea>

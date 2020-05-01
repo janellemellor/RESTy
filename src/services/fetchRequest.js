@@ -1,7 +1,5 @@
-export const fetchRequest = (url, {
-  method: 'POST',
-  body: JSON.stringify()
-}) => {
-  return fetch(`${url}`);
+export const fetchRequest = (url, requestOption) => {
+  return fetch(url, requestOption)
+    .then(res => res.json());
 };
 
