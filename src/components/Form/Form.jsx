@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Form = ({ onSubmit, url, onUrlChange, method, onInputChange, response, onResponseChange }) => (
+const Form = ({ onSubmit, url, onUrlChange, method, onInputChange, jsonBody, onJsonBodyChange }) => (
   <form onSubmit={onSubmit}>
     <fieldset>
       <input name="url-input" type="text" value={url} onUrlChange={onUrlChange} />
@@ -22,7 +22,7 @@ const Form = ({ onSubmit, url, onUrlChange, method, onInputChange, response, onR
       </label>    
       <button>Go!</button>
       <label>
-        <textarea name="response" value={response} onResponseChange={onResponseChange}> </textarea>
+        <textarea name="jsonBody" value={jsonBody} onJsonBodyChange={onJsonBodyChange}> </textarea>
       </label>
     </fieldset>
   </form>
@@ -34,8 +34,8 @@ Form.propTypes = {
   onUrlChange: PropTypes.func.isRequired,
   method: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
-  response: PropTypes.string.isRequired,
-  onResponseChange: PropTypes.func.isRequired
+  jsonBody: PropTypes.string.isRequired,
+  onJsonBodyChange: PropTypes.func.isRequired
 };
 
 export default Form;
