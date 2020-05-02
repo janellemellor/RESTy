@@ -4,5 +4,6 @@ export const fetchRequest = (url, method = 'GET', body) => {
     body: body ? JSON.stringify(body) : null
   }) 
     .then(res => res.json());
+  //may need to add additional shaping here.
 };
 

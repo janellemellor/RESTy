@@ -15,6 +15,7 @@ const RESTyContainer = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchRequest(url, method, jsonBody);
+    //will need to update to display the response
   };
 
 
