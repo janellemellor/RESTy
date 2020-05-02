@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Form from '../../components/Form/Form.jsx';
+import Response from '../../components/Response/Response.jsx';
 import { fetchRequest } from '../../services/fetchRequest.js';
 
 const RESTyContainer = () => {
   const [url, setUrl] = useState('');
   const [method, setMethod] = useState('GET');
   const [jsonBody, setJsonBody] = useState('');
+  const [response, setResponse] = useState({});
   
   
   const handleUrlChange = ({ target }) => setUrl(target.value);
@@ -14,8 +16,8 @@ const RESTyContainer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchRequest(url, method, jsonBody);
-    //will need to update to display the response
+    fetchRequest(url, method, jsonBody)
+      .then(response => setResponse(response));
   };
 
 
@@ -28,6 +30,7 @@ const RESTyContainer = () => {
         onInputChange={handleInputChange}
         jsonBody={jsonBody}
         onJsonBodyChange={handleJsonBodyChange} />
+      <Response response={response} />  
     </>
   );
 };
