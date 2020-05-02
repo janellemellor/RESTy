@@ -16,8 +16,9 @@ const RESTyContainer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchRequest(url, method, jsonBody)
-      .then(response => setResponse(response));
+    const fetch = fetchRequest(url, method, jsonBody);
+    setResponse(fetch);
+    // .then(response => setResponse(response));
   };
 
 
@@ -30,7 +31,7 @@ const RESTyContainer = () => {
         onInputChange={handleInputChange}
         jsonBody={jsonBody}
         onJsonBodyChange={handleJsonBodyChange} />
-      <Response response={response} />  
+      {/* <Response response={response} />   */}
     </>
   );
 };
