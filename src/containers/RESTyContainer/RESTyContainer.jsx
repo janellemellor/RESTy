@@ -16,10 +16,9 @@ const RESTyContainer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const fetch = fetchRequest(url, method, jsonBody);
-    setResponse(fetch);
-    // .then(response => setResponse(response));
-  };
+    fetchRequest(url, method, jsonBody)
+      .then(res => setResponse(JSON.stringify(res)));
+  }; console.log(response);
 
 
   return (
