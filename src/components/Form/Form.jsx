@@ -14,7 +14,7 @@ const Form = ({ onSubmit, url, onChange, jsonBody }) => (
         <RadioButton value="DELETE" />
       </RadioButtonGroup>
       <button>Go!</button>
-      <textarea name="jsonBody" value={jsonBody} onChange={onChange}> </textarea>
+      <textarea name="json-body" value={jsonBody} onChange={onChange}> </textarea>
     </fieldset>    
   </form>
 );

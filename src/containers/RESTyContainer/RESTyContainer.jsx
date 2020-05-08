@@ -9,10 +9,11 @@ const RESTyContainer = () => {
   const [jsonBody, setJsonBody] = useState('');
   const [response, setResponse] = useState({});
   
-  
-  const handleUrlChange = ({ target }) => setUrl(target.value);
-  const handleInputChange = ({ target }) => setMethod(target.value);
-  const handleJsonBodyChange = ({ target }) => setJsonBody(target.value);
+  const handleChange = ({ target }) => {
+    if(target.name === 'url-input') setUrl(target.value);
+    if(target.name === 'methods') setMethod(target.value);
+    if(target.name === 'json-body') setJsonBody(target.value);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -25,11 +26,9 @@ const RESTyContainer = () => {
     <>
       <Form  onSubmit={handleSubmit}
         url={url}
-        onUrlChange={handleUrlChange}
-        method={method}
-        onInputChange={handleInputChange}
+        onChange={handleChange}
         jsonBody={jsonBody}
-        onJsonBodyChange={handleJsonBodyChange} />
+      />
       {/* <Response response={response} />   */}
     </>
   );
