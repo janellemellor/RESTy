@@ -18,14 +18,17 @@ const RESTyContainer = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchRequest(url, method, jsonBody)
-      .then(res => setResponse(JSON.stringify(res)));
-  }; console.log(response);
-
-
+      .then(res => {
+        setResponse(res);
+      }); console.log(response);
+  };
+  
   return (
     <>
-      <Form  onSubmit={handleSubmit}
+      <Form  
+        onSubmit={handleSubmit}
         url={url}
+        method={method}
         onChange={handleChange}
         jsonBody={jsonBody}
       />
@@ -35,3 +38,4 @@ const RESTyContainer = () => {
 };
 
 export default RESTyContainer;
+
