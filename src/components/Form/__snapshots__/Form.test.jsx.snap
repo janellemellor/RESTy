@@ -7,65 +7,40 @@ exports[`Form Component matches a snapshot 1`] = `
   <fieldset>
     <input
       name="url-input"
-      onUrlChange={[Function]}
+      onChange={[Function]}
       type="text"
       value="https://github.com/janellemellor"
     />
-    <label>
-       GET
-      <input
-        name="methods"
-        onInputChange={[Function]}
-        type="radio"
+    <RadioButtonGroup
+      name="methods"
+      onuChange={[Function]}
+    >
+      <RadioButton
         value="GET"
       />
-    </label>
-    <label>
-       POST
-      <input
-        name="methods"
-        onInputChange={[Function]}
-        type="radio"
+      <RadioButton
         value="POST"
       />
-    </label>
-    <label>
-       PUT
-      <input
-        name="methods"
-        onInputChange={[Function]}
-        type="radio"
+      <RadioButton
         value="PUT"
       />
-    </label>
-    <label>
-       PATCH
-      <input
-        name="methods"
-        onInputChange={[Function]}
-        type="radio"
+      <RadioButton
         value="PATCH"
       />
-    </label>
-    <label>
-       DELETE
-      <input
-        name="methods"
-        onInputChange={[Function]}
-        type="radio"
+      <RadioButton
         value="DELETE"
       />
-    </label>
+    </RadioButtonGroup>
     <button>
       Go!
     </button>
-    <label>
-      <textarea
-        name="jsonBody"
-      >
-         
-      </textarea>
-    </label>
+    <textarea
+      name="jsonBody"
+      onChange={[Function]}
+      value="{}"
+    >
+       
+    </textarea>
   </fieldset>
 </form>
 `;

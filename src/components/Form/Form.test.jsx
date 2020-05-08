@@ -7,11 +7,8 @@ describe('Form Component', () => {
     const wrapper = shallow(<Form 
       onSubmit={() => {}}
       url='https://github.com/janellemellor'
-      onUrlChange={() => {}}
-      method='get'
-      onInputChange={() => {}}
-      response='response'
-      onResponseChange={() => {}} />);
+      onChange={() => {}}
+      jsonBody='{}' />);
     expect(wrapper).toMatchSnapshot();
   });    
 });
