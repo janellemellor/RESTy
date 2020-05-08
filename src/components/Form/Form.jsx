@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { RadioButtonGroup, RadioButton } from './RadioButton';
 
-const Form = ({ onSubmit, url, onChange, jsonBody }) => (
+const Form = ({ onSubmit, url, onChange, method, jsonBody }) => (
   <form onSubmit={onSubmit}>
     <fieldset>
       <input name="url-input" type="text" value={url} onChange={onChange} />
-      <RadioButtonGroup name="methods" onuChange={onChange} >
+      <RadioButtonGroup name="methods" onuChange={onChange} checked={method === value} >
         <RadioButton value="GET" />
         <RadioButton value="POST" />
         <RadioButton value="PUT" />
@@ -24,6 +24,7 @@ Form.propTypes = {
   url: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   jsonBody: PropTypes.string,
+  method: PropTypes.string.isRequired
 };
 
 export default Form;
