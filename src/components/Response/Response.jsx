@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Response = ({ response }) => (
   <>
-    {response}
+    {JSON.stringify(response)}
   </>
 );
 

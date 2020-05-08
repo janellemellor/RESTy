@@ -29,7 +29,7 @@ const RESTyContainer = () => {
         onChange={handleChange}
         jsonBody={jsonBody}
       />
-      {/* <Response response={response} />   */}
+      <Response response={response} />  
     </>
   );
 };

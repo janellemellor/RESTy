@@ -1,4 +1,4 @@
-const BODY_METHODS = ['POST', 'PUT', "PATCH"]
+const BODY_METHODS = ['POST', 'PUT', 'PATCH'];
 
 export const fetchRequest = (url, method = 'GET', body) => {
   return fetch(url, {
