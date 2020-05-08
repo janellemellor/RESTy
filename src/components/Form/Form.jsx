@@ -6,12 +6,12 @@ const Form = ({ onSubmit, url, onChange, method, jsonBody }) => (
   <form onSubmit={onSubmit}>
     <fieldset>
       <input name="url-input" type="text" value={url} onChange={onChange} />
-      <RadioButtonGroup name="methods" onuChange={onChange} checked={method === value} >
-        <RadioButton value="GET" />
-        <RadioButton value="POST" />
-        <RadioButton value="PUT" />
-        <RadioButton value="PATCH" />
-        <RadioButton value="DELETE" />
+      <RadioButtonGroup name="methods" onChange={onChange} >
+        <RadioButton value="GET" checked={method === 'GET'} />
+        <RadioButton value="POST" checked={method === 'POST'} />
+        <RadioButton value="PUT" checked={method === 'PUT'} />
+        <RadioButton value="PATCH" checked={method === 'PATCH'} />
+        <RadioButton value="DELETE" checked={method === 'DELETE'} />
       </RadioButtonGroup>
       <button>Go!</button>
       <textarea name="json-body" value={jsonBody} onChange={onChange}> </textarea>
