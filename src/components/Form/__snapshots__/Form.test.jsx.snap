@@ -35,7 +35,7 @@ exports[`Form Component matches a snapshot 1`] = `
       Go!
     </button>
     <textarea
-      name="jsonBody"
+      name="json-body"
       onChange={[Function]}
       value="{}"
     >
