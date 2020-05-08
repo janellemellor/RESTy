@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Response = ({ response }) => (
-  <>
-    {JSON.stringify(response)}
-  </>
+  <pre>
+    {JSON.stringify(response, null, 2)}
+  </pre>
 );
 
 Response.propTypes = {
