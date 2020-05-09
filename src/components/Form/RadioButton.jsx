@@ -16,13 +16,12 @@ export const RadioButtonGroup = ({ children, name, onChange }) => {
   );
 };
 
-export const RadioButton = ({ method, name, value, onChange }) => (
+export const RadioButton = ({ name, value, onChange }) => (
   <>
-    <input type="radio" checked={method === value} name={name} value={value} onChange={onChange} />
+    <input type="radio" id={value} name={name} value={value} onChange={onChange} />
     <label htmlFor={value}>{value}</label>
   </>
 );
-
 
 RadioButtonGroup.propTypes = {
   children: PropTypes.node,
@@ -34,6 +33,5 @@ RadioButton.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string,
-  method: PropTypes.string.isRequired
 };
 
