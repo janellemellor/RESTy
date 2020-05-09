@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import HistoryItem from './HistoryItem';
 
 const History = ({ history }) => {
-  const allHistory = history.map((item, i) => (
+  const requestHistory = history.map((item, i) => (
     <li key={i}>
       <HistoryItem {...item} />
     </li>
@@ -11,7 +11,7 @@ const History = ({ history }) => {
 
   return (
     <ul>
-      {allHistory}  
+      {requestHistory}  
     </ul>
   );
 };
