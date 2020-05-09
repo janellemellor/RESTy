@@ -13,7 +13,7 @@ exports[`Form Component matches a snapshot 1`] = `
     />
     <RadioButtonGroup
       name="methods"
-      onuChange={[Function]}
+      onChange={[Function]}
     >
       <RadioButton
         value="GET"
