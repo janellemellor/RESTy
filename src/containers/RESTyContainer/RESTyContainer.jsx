@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from '../../components/Form/Form.jsx';
 import Response from '../../components/Response/Response.jsx';
+import History from '../../components/History/History.jsx';
 import { fetchRequest } from '../../services/fetchRequest.js';
 
 const RESTyContainer = () => {
@@ -8,6 +9,7 @@ const RESTyContainer = () => {
   const [method, setMethod] = useState('GET');
   const [jsonBody, setJsonBody] = useState('');
   const [response, setResponse] = useState({});
+  const [history, setHistory] = useState([]);
   
   const handleChange = ({ target }) => {
     if(target.name === 'url-input') setUrl(target.value);
@@ -32,7 +34,8 @@ const RESTyContainer = () => {
         onChange={handleChange}
         jsonBody={jsonBody}
       />
-      <Response response={response} />  
+      <Response response={response} /> 
+      <History history={history} /> 
     </>
   );
 };
