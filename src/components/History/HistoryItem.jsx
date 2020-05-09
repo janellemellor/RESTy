@@ -8,7 +8,7 @@ const HistoryItem = ({ url, method }) => (
   </section>
 );
 
-HistoryItem.propTypes ={
+HistoryItem.propTypes = {
   url: PropTypes.string.isRequired,
   method: PropTypes.string.isRequired
 };
